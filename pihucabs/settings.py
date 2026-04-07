@@ -24,8 +24,7 @@ SECRET_KEY = 'django-insecure-@+6=(1m_3rm*8vx!vyigr0g4kr-qt$bylch2(rjd^m#ln09$o5
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pihucabs.co.in', 'wwww.pihucabs.co.in', '3.26.42.72']
 
 
 # Application definition
@@ -68,7 +67,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'pihucabs.wsgi.application'
-
+CSRF_TRUSTED_ORIGINS = ["https://pihucabs.co.in", "https://www.pihucabs.co.in"]
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
@@ -76,9 +75,9 @@ WSGI_APPLICATION = 'pihucabs.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pihucab',
-        'USER': 'root',
-        'PASSWORD': '',
+        'NAME': 'pihucabs_db',
+        'USER': 'pihuuser',
+        'PASSWORD': 'StrongPassword123',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {

@@ -51,7 +51,7 @@ def book_taxi(request):
         """
 
         from_email = 'yourgmail@gmail.com'
-        recipient_list = ['bsyadav9410@gmail.com','rajy0707@gmail.com']  # 👈 jahan mail receive karna hai
+        recipient_list = ['bsyadav9410@gmail.com','rajy0707@gmail.com','akkiyadavbaleni@gmail.com']  # 👈 jahan mail receive karna hai
 
         send_mail(subject, message, from_email, recipient_list)
 
