@@ -1,4 +1,22 @@
 
+:root {
+    --theme-color: #f4b400;
+}
+
+/* Primary override */
+.text-primary {
+    color: #f4b400 !important;
+}
+
+.btn-primary {
+    background-color: #f4b400 !important;
+    border: none;
+    color: #000 !important;
+}
+
+.btn-primary:hover {
+    background-color: #d99a00 !important;
+}
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {

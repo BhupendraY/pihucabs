@@ -18,7 +18,8 @@ SECRET_KEY = 'django-insecure-@+6=(1m_3rm*8vx!vyigr0g4kr-qt$bylch2(rjd^m#ln09$o5
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['pihucabs.co.in', 'wwww.pihucabs.co.in', '3.26.42.72']
+# ALLOWED_HOSTS = ['pihucabs.co.in', 'wwww.pihucabs.co.in', '3.26.42.72']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -79,6 +80,21 @@ DATABASES = {
         }
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'pihucab',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+#         }
+#     }
+# }
+
 
 
 # Password validation

@@ -50,7 +50,7 @@
         <!-- Spinner End -->
 
         <!-- Topbar Start -->
-        <div class="container-fluid topbar bg-secondary d-none d-xl-block w-100">
+        <div class="container-fluid topbar" style="background:#000;" d-none d-xl-block w-100">
             <div class="container">
                 <div class="row gx-0 align-items-center" style="height: 45px;">
                     <div class="col-lg-6 text-center text-lg-start mb-lg-0">
@@ -116,21 +116,16 @@
                                     <div class="col-lg-6 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
                                         <div class="bg-secondary rounded p-5">
                                             <h4 class="text-white mb-4">BOOK A TAXI</h4>
-                                           
-                                                <form method="POST" action="{% url 'book_taxi' %}">
-                                                    {% csrf_token %}
-
-                                                    <div class="row g-3">
-
-                                                        <div class="col-md-4">
+                                            <form method="POST" action="{% url 'book_taxi' %}">
+                                                {% csrf_token %}
+                                                <div class="row g-3">
+                                                    <div class="col-md-4">
                                                         <input type="text" name="name" class="form-control" placeholder="Your Name">
-                                                        </div>
-
-                                                        <div class="col-md-4">
+                                                    </div>
+                                                    <div class="col-md-4">
                                                         <input type="text" name="phone" class="form-control" placeholder="Phone Number">
-                                                        </div>
-
-                                                        <div class="col-md-4">
+                                                    </div>
+                                                    <div class="col-md-4">
                                                         <select name="passengers" class="form-select">
                                                             <option>Passenger 1</option>
                                                             <option>Passenger 2</option>
@@ -139,32 +134,26 @@
                                                             <option>Passenger 5</option>
                                                             <option>Passenger 6</option>
                                                         </select>
-                                                        </div>
-
-                                                        <div class="col-md-4">
+                                                    </div>
+                                                    <div class="col-md-4">
                                                         <input type="text" name="from_location" class="form-control" placeholder="From where?">
-                                                        </div>
-
-                                                        <div class="col-md-4">
+                                                    </div>
+                                                    <div class="col-md-4">
                                                         <input type="text" name="to_location" class="form-control" placeholder="To where?">
-                                                        </div>
-
-                                                        <div class="col-md-4">
+                                                    </div>
+                                                    <div class="col-md-4">
                                                         <input type="date" name="date" class="form-control">
-                                                        </div>
-
-                                                        <div class="col-12">
+                                                    </div>
+                                                    <div class="col-12">
                                                         <input type="time" name="time" class="form-control">
-                                                        </div>
-
-                                                        <div class="col-12">
-                                                        <button type="submit" class="btn w-100 py-3" style="background:#f4b400;">
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button type="submit" class="btn btn-primary w-100 py-3">
                                                             BOOK TAXI NOW →
                                                         </button>
-                                                        </div>
-
                                                     </div>
-                                                    </form>
+                                                </div>
+                                            </form>
                                             
                                         </div>
                                     </div>
@@ -228,7 +217,7 @@
                                                         </div>
 
                                                         <div class="col-12">
-                                                        <button type="submit" class="btn w-100 py-3" style="background:#f4b400;">
+                                                        <button type="submit" class="btn btn-primary w-100 py-3">
                                                             BOOK TAXI NOW →
                                                         </button>
                                                         </div>
@@ -260,7 +249,7 @@
                         <div class="about-item">
                             <div class="pb-5">
                                 <h1 class="display-5 text-capitalize">Pihucabs <span class="text-primary">About</span></h1>
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut amet nemo expedita asperiores commodi accusantium at cum harum, excepturi, quia tempora cupiditate! Adipisci facilis modi quisquam quia distinctio,
+                                <p class="mb-0">Pihucabs is a trusted and reliable cab booking service dedicated to providing safe, comfortable, and affordable travel experiences. With over 7+ years of experience, we proudly serve customers with a wide range of vehicles for local travel, outstation trips, airport transfers, and corporate travel.
                                 </p>
                             </div>
                             <div class="row g-4">
@@ -270,7 +259,7 @@
                                             <img src="{% static 'img/about-icon-1.png' %}" class="img-fluid w-50 h-50" alt="Icon">
                                         </div>
                                         <h5 class="mb-3">Our Vision</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <p class="mb-0">To become the most trusted and preferred cab service provider by delivering exceptional customer experience, safety, and reliability in every ride.</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -279,30 +268,32 @@
                                             <img src="{% static 'img/about-icon-2.png' %}" class="img-fluid h-50 w-50" alt="Icon">
                                         </div>
                                         <h5 class="mb-3">Our Mision</h5>
-                                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                        <p class="mb-0">To provide affordable, safe, and comfortable transportation solutions with a focus on customer satisfaction, punctuality, and quality service.</p>
                                     </div>
                                 </div>
                             </div>
-                            <p class="text-item my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, aliquam ipsum. Sed suscipit dolorem libero sequi aut natus debitis reprehenderit facilis quaerat similique, est at in eum. Quo, obcaecati in!
+                            <p class="text-item my-4">Our mission is to make every journey smooth, hassle-free, and memorable. Whether you are traveling for business or leisure, we ensure timely service, professional drivers, and well-maintained vehicles for a premium experience.
                             </p>
                             <div class="row g-4">
                                 <div class="col-lg-6">
                                     <div class="text-center rounded bg-secondary p-4">
-                                        <h1 class="display-6 text-white">17</h1>
+                                        <h1 class="display-6 text-white">7</h1>
                                         <h5 class="text-light mb-0">Years Of Experience</h5>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="rounded">
-                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> Morbi tristique senectus</p>
-                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> A scelerisque purus</p>
-                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> Dictumst vestibulum</p>
-                                        <p class="mb-0"><i class="fa fa-check-circle text-primary me-1"></i> dio aenean sed adipiscing</p>
+                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> Professional & Verified Drivers</p>
+                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> Easy Booking Process</p>
+                                        <p class="mb-2"><i class="fa fa-check-circle text-primary me-1"></i> Affordable Pricing</p>
+                                        <p class="mb-0"><i class="fa fa-check-circle text-primary me-1"></i> On-Time Pickup & Drop</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 d-flex align-items-center">
                                     <a href="#" class="btn btn-primary rounded py-3 px-5">More About Us</a>
                                 </div>
+
+                              
                                 {% comment %} <div class="col-lg-7">
                                     <div class="d-flex align-items-center">
                                         <img src="{% static 'img/attachment-img.jpg' %}" class="img-fluid rounded-circle border border-4 border-secondary" style="width: 100px; height: 100px;" alt="Image">
@@ -329,6 +320,68 @@
             </div>
         </div>
         <!-- About End -->
+
+        <!-- Popular Destinations Start -->
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 text-capitalize mb-3">Popular <span class="text-primary">Destinations</span></h1>
+    </div>
+    <div class="row g-4">
+        <!-- Dehradun -->
+        <div class="col-md-3">
+            <div class="card text-center shadow border-0" style="background:#222;">
+                <img src="{% static 'img/Untitled-design-2-3.webp' %}" class="card-img-top" alt="Dehradun">
+                <div class="card-body" style="background:#222;">
+                    <h5 class="card-title text-primary">Dehradun</h5>
+                </div>
+                <div class="card-footer bg-white d-flex justify-content-around border-0">
+                    <a href="tel:+919410463450" class="btn btn-outline-primary btn-sm"><i class="fa fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/919410463450" class="btn btn-outline-success btn-sm"><i class="fa fa-whatsapp"></i> WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- Haridwar -->
+        <div class="col-md-3">
+            <div class="card text-center shadow border-0" style="background:#222;">
+                <img src="{% static 'img/WhatsApp-Image-2025-07-04-at-10.09.32_4693fd49.webp' %}" class="card-img-top" alt="Haridwar">
+                <div class="card-body" style="background:#222;">
+                    <h5 class="card-title text-primary">Haridwar</h5>
+                </div>
+                <div class="card-footer bg-white d-flex justify-content-around border-0">
+                    <a href="tel:+919410463450" class="btn btn-outline-primary btn-sm"><i class="fa fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/919410463450" class="btn btn-outline-success btn-sm"><i class="fa fa-whatsapp"></i> WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- Mussoorie -->
+        <div class="col-md-3">
+            <div class="card text-center shadow border-0" style="background:#222;">
+                <img src="{% static 'img/Untitled-design-2-1-1.webp' %}" class="card-img-top" alt="Mussoorie">
+                <div class="card-body" style="background:#222;">
+                    <h5 class="card-title text-primary">Mussoorie</h5>
+                </div>
+                <div class="card-footer bg-white d-flex justify-content-around border-0">
+                    <a href="tel:+919410463450" class="btn btn-outline-primary btn-sm"><i class="fa fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/919410463450" class="btn btn-outline-success btn-sm"><i class="fa fa-whatsapp"></i> WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+        <!-- Rishikesh -->
+        <div class="col-md-3">
+            <div class="card text-center shadow border-0" style="background:#222;">
+                <img src="{% static 'img/Untitled-design-3-1.webp' %}" class="card-img-top" alt="Rishikesh">
+                <div class="card-body" style="background:#222;">
+                    <h5 class="card-title text-primary">Rishikesh</h5>
+                </div>
+                <div class="card-footer bg-white d-flex justify-content-around border-0">
+                    <a href="tel:+919410463450" class="btn btn-outline-primary btn-sm"><i class="fa fa-phone"></i> Call Now</a>
+                    <a href="https://wa.me/919410463450" class="btn btn-outline-success btn-sm"><i class="fa fa-whatsapp"></i> WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Popular Destinations End -->
 
         <!-- Car categories Start -->
         {% comment %} <div class="container-fluid categories py-5">
