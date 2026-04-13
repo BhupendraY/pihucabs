@@ -55,9 +55,9 @@
                 <div class="row gx-0 align-items-center" style="height: 45px;">
                     <div class="col-lg-6 text-center text-lg-start mb-lg-0">
                         <div class="d-flex flex-wrap">
-                            <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
-                            <a href="tel:+01234567890" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+919410463450</a>
-                            <a href="mailto:example@gmail.com" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>bsyadav9410@gmail.com</a>
+                        
+                            <a href="tel:+919410463450" class="text-muted me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+919410463450</a>
+                            <a href="mailto:bsyadav9410@gmail.com" class="text-muted me-0"><i class="fas fa-envelope text-primary me-2"></i>bsyadav9410@gmail.com</a>
                         </div>
                     </div>
                     <div class="col-lg-6 text-center text-lg-end">
@@ -120,13 +120,14 @@
                                                 {% csrf_token %}
                                                 <div class="row g-3">
                                                     <div class="col-md-4">
-                                                        <input type="text" name="name" class="form-control" placeholder="Your Name">
+                                                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                                                     </div>
                                                     <div class="col-md-4">
-                                                        <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                                        <input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
                                                     </div>
                                                     <div class="col-md-4">
-                                                        <select name="passengers" class="form-select">
+                                                        <select name="passengers" class="form-select" required>
+                                                            <option value="">Select Passengers</option>
                                                             <option>Passenger 1</option>
                                                             <option>Passenger 2</option>
                                                             <option>Passenger 3</option>
@@ -136,16 +137,16 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-md-4">
-                                                        <input type="text" name="from_location" class="form-control" placeholder="From where?">
+                                                        <input type="text" name="from_location" class="form-control" placeholder="From where?" required>
                                                     </div>
                                                     <div class="col-md-4">
-                                                        <input type="text" name="to_location" class="form-control" placeholder="To where?">
+                                                        <input type="text" name="to_location" class="form-control" placeholder="To where?" required>
                                                     </div>
                                                     <div class="col-md-4">
-                                                        <input type="date" name="date" class="form-control">
+                                                        <input type="date" name="date" class="form-control" required>
                                                     </div>
                                                     <div class="col-12">
-                                                        <input type="time" name="time" class="form-control">
+                                                        <input type="time" name="time" class="form-control" required>
                                                     </div>
                                                     <div class="col-12">
                                                         <button type="submit" class="btn btn-primary w-100 py-3">
@@ -182,15 +183,16 @@
                                                     <div class="row g-3">
 
                                                         <div class="col-md-4">
-                                                        <input type="text" name="name" class="form-control" placeholder="Your Name">
+                                                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                        <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                                        <input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                        <select name="passengers" class="form-select">
+                                                        <select name="passengers" class="form-select" required>
+                                                            <option value="">Select Passengers</option>
                                                             <option>Passenger 1</option>
                                                             <option>Passenger 2</option>
                                                             <option>Passenger 3</option>
@@ -201,19 +203,19 @@
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                        <input type="text" name="from_location" class="form-control" placeholder="From where?">
+                                                        <input type="text" name="from_location" class="form-control" placeholder="From where?" required>
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                        <input type="text" name="to_location" class="form-control" placeholder="To where?">
+                                                        <input type="text" name="to_location" class="form-control" placeholder="To where?" required>
                                                         </div>
 
                                                         <div class="col-md-4">
-                                                        <input type="date" name="date" class="form-control">
+                                                        <input type="date" name="date" class="form-control" required>
                                                         </div>
 
                                                         <div class="col-12">
-                                                        <input type="time" name="time" class="form-control">
+                                                        <input type="time" name="time" class="form-control" required>
                                                         </div>
 
                                                         <div class="col-12">
